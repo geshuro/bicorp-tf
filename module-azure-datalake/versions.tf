@@ -1,5 +1,9 @@
 terraform {
   required_providers {
+    azuread = {
+      source  = "hashicorp/azuread"
+      version = ">= 1.0.0"
+    }
     azurerm = {
       source  = "hashicorp/azurerm"
       version = ">= 2.32.0"
@@ -8,13 +12,21 @@ terraform {
       source  = "databrickslabs/databricks"
       version = ">= 0.2.8"
     }
+    http = {
+      source = "hashicorp/http"
+    }
+    local = {
+      source = "hashicorp/local"
+    }
+    null = {
+      source = "hashicorp/null"
+    }
     random = {
       source = "hashicorp/random"
     }
+    time = {
+      source = "hashicorp/time"
+    }
   }
-
-  backend "azurerm" {
-  } 
-
   required_version = ">= 0.13"
 }

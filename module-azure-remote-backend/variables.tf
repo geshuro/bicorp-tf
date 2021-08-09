@@ -1,9 +1,3 @@
-variable "id" {
-  type        = string
-  description = "Unique identifier of the deployment"
-  default     = ""
-}
-# project
 variable "project" {
   type = string
   description = "This variable defines the name of the project"
@@ -45,9 +39,21 @@ variable "account_replication_type" {
   description = "Account replication type"
   default = "ZRS"
 }
+# tfstate name
+variable "tfstate_name" {
+  type = string
+  description = "Name of tfstate"
+  default = ""
+}
 # sequential number
 variable "sequential_number" {
   type = string
   description = "Sequential number"
   default = "001"
+}
+# map tags
+variable "tags" {
+  type        = map(string)
+  description = "Name of map tags"
+  default     = {}
 }
